@@ -31,7 +31,8 @@ Details: [Jet75-II open questions](keyboards/jet75-ii/open-questions.md).
 
 Repository: `open-he-mchose/driver` (planned).
 
-- Library + command-line tool for **Linux, Windows and macOS** (HID access through hidapi or the OS APIs).
+- Library + command-line tool in **C++20** (CMake, HID access through hidapi) for **Linux and Windows**.
+  macOS is not planned for now (not a primary target).
 - Everything the official driver can configure: actuation and rapid trigger per key, keymap and layers,
   advanced keys, lighting, profiles, macros.
 - Live key depth and live per-key lighting.
@@ -44,8 +45,9 @@ Repository: `open-he-mchose/driver` (planned).
 
 ## 3. Cross-platform GUI 📋
 
-Repository: `open-he-mchose/configurator` (planned). A desktop application on top of the driver for
-**Windows, macOS and Linux** — an open alternative to the official web driver. Technology not chosen yet.
+A desktop application on top of the driver, built with **Qt 6 (Qt Quick)**, for **Windows and Linux** — an
+open alternative to the official web driver. macOS is not planned for now (not a primary target); Qt and
+hidapi support it, so it may come later if someone needs it.
 
 - Visual keyboard: select keys, set actuation / rapid trigger, remap.
 - Live key-depth view (per-key travel in real time).
