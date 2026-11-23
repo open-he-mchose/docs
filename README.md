@@ -18,6 +18,7 @@ software or code is distributed here — only descriptions written from observat
 
 | Section | What it covers |
 |---|---|
+| [roadmap.md](roadmap.md) | What is done and what is planned: full Jet75-II reverse engineering, open driver, cross-platform GUI |
 | [keyboards/](keyboards/README.md) | All MCHOSE magnetic models known to the official driver, one directory per documented model |
 | [keyboards/jet75-ii/](keyboards/jet75-ii/README.md) | **Jet75-II** (the reference model, fully documented and tested) |
 | [protocols/](protocols/README.md) | Protocol families: [`glw`](protocols/glw/README.md) (30 models) and [`qhw`](protocols/qhw/README.md) (2 models, not yet researched) |
