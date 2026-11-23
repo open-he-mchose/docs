@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+# vendor material and anything extracted from it stays local
+*.bin
+*.elf
+curves.json

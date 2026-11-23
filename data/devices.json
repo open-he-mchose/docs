@@ -1,0 +1,1200 @@
+{
+ "source": "MCHOSE web driver (cizhou), device table",
+ "count": 32,
+ "devices": [
+  {
+   "key": "0x41E4_0x2101",
+   "vid": "0x41E4",
+   "pid": "0x2101",
+   "id": "ace60",
+   "name": "Ace 60",
+   "fullName": "Ace 60",
+   "storageKey": "Ace 60",
+   "protocol": "glw",
+   "type": 101,
+   "fwVersion": 120,
+   "minFwVersion": 106,
+   "bootloader": "0x41E4_0x2102",
+   "wireless": false,
+   "testing": false,
+   "glbKeyboardKey": "Ace60",
+   "hidFilters": [
+    {
+     "usagePage": 1,
+     "usage": 0
+    },
+    {
+     "usagePage": 65280,
+     "usage": 1
+    }
+   ],
+   "precisionMm": [
+    0.02
+   ],
+   "features": [
+    "EnableMouseMacro",
+    "GLWRemapkableLightV2",
+    "ViewKeyboardLight"
+   ],
+   "receivers": [
+    {
+     "vid": "0x19F5",
+     "pid": "0xFC30",
+     "productName": null,
+     "bootloader": "0x19F5_0xFF1B"
+    }
+   ]
+  },
+  {
+   "key": "0x41E4_0x2103",
+   "vid": "0x41E4",
+   "pid": "0x2103",
+   "id": "ace60pro",
+   "name": "Ace 60 Pro",
+   "fullName": "Ace 60 Pro",
+   "storageKey": "Ace 60 Pro",
+   "protocol": "glw",
+   "type": 102,
+   "fwVersion": 118,
+   "minFwVersion": 106,
+   "bootloader": "0x41E4_0x2104",
+   "wireless": false,
+   "testing": false,
+   "glbKeyboardKey": "Ace60",
+   "hidFilters": [
+    {
+     "usagePage": 1,
+     "usage": 0
+    },
+    {
+     "usagePage": 65280,
+     "usage": 1
+    }
+   ],
+   "precisionMm": [
+    0.005,
+    0.01
+   ],
+   "features": [
+    "EnableMouseMacro",
+    "GLWRemapkableLightV2",
+    "ViewKeyboardLight"
+   ],
+   "receivers": [
+    {
+     "vid": "0x19F5",
+     "pid": "0xFC31",
+     "productName": null,
+     "bootloader": "0x19F5_0xFF0F"
+    }
+   ]
+  },
+  {
+   "key": "0x3837_0x3040",
+   "vid": "0x3837",
+   "pid": "0x3040",
+   "id": "ace60_FR",
+   "name": "Ace 60 Pro ISO FR",
+   "fullName": "Ace 60 Pro ISO FR",
+   "storageKey": "Ace 60 Pro ISO FR",
+   "protocol": "glw",
+   "type": 150,
+   "fwVersion": 100,
+   "bootloader": "0x3837_0x3041",
+   "wireless": false,
+   "testing": true,
+   "glbKeyboardKey": "Ace60ProISOFR",
+   "hidFilters": [
+    {
+     "usagePage": 1,
+     "usage": 0
+    },
+    {
+     "usagePage": 65280,
+     "usage": 1
+    }
+   ],
+   "precisionMm": [
+    0.01
+   ],
+   "features": [
+    "EnableMouseMacro",
+    "GLWRemapkableLightV2",
+    "ViewKeyboardLight"
+   ]
+  },
+  {
+   "key": "0x3837_0x3002",
+   "vid": "0x3837",
+   "pid": "0x3002",
+   "id": "ace60_BP",
+   "name": "Ace 60 Pro Nordic",
+   "fullName": "Ace 60 Pro Nordic",
+   "storageKey": "Ace 60 Pro Nordic",
+   "protocol": "glw",
+   "type": 109,
+   "fwVersion": 107,
+   "bootloader": "0x3837_0x3022",
+   "wireless": false,
+   "testing": false,
+   "glbKeyboardKey": "Ace60ProNordic",
+   "hidFilters": [
+    {
+     "usagePage": 1,
+     "usage": 0
+    },
+    {
+     "usagePage": 65280,
+     "usage": 1
+    }
+   ],
+   "precisionMm": [
+    0.01
+   ],
+   "features": [
+    "EnableMouseMacro",
+    "GLWRemapkableLightV2",
+    "ViewKeyboardLight"
+   ]
+  },
+  {
+   "key": "0x41E4_0x2112",
+   "vid": "0x41E4",
+   "pid": "0x2112",
+   "id": "ace60",
+   "name": "Ace 60X",
+   "fullName": "Ace 60X(电竞版)",
+   "storageKey": "Ace 60X II",
+   "protocol": "glw",
+   "type": 104,
+   "fwVersion": 104,
+   "bootloader": "0x41E4_0x2113",
+   "wireless": false,
+   "testing": false,
+   "glbKeyboardKey": "Ace60",
+   "hidFilters": [
+    {
+     "usagePage": 1,
+     "usage": 0
+    },
+    {
+     "usagePage": 65280,
+     "usage": 1
+    }
+   ],
+   "precisionMm": [
+    0.01
+   ],
+   "features": [
+    "EnableMouseMacro",
+    "GLWRemapkableLightV2",
+    "ViewKeyboardLight"
+   ]
+  },
+  {
+   "key": "0x41E4_0x2126",
+   "vid": "0x41E4",
+   "pid": "0x2126",
+   "id": "ace60",
+   "name": "Ace 60X",
+   "fullName": "Ace 60X",
+   "storageKey": "Ace 60X I",
+   "protocol": "glw",
+   "type": 103,
+   "fwVersion": 105,
+   "bootloader": "0x41E4_0x2127",
+   "wireless": false,
+   "testing": false,
+   "glbKeyboardKey": "Ace60",
+   "hidFilters": [
+    {
+     "usagePage": 1,
+     "usage": 0
+    },
+    {
+     "usagePage": 65280,
+     "usage": 1
+    }
+   ],
+   "precisionMm": [
+    0.01
+   ],
+   "features": [
+    "EnableMouseMacro",
+    "GLWRemapkableLightV2",
+    "ViewKeyboardLight"
+   ]
+  },
+  {
+   "key": "0x41E4_0x2114",
+   "vid": "0x41E4",
+   "pid": "0x2114",
+   "id": "ace68",
+   "name": "Ace 68",
+   "fullName": "Ace 68",
+   "storageKey": "Ace 68 I",
+   "protocol": "glw",
+   "type": 111,
+   "fwVersion": 109,
+   "bootloader": "0x41E4_0x2115",
+   "wireless": false,
+   "testing": false,
+   "glbKeyboardKey": "Ace68",
+   "hidFilters": [
+    {
+     "usagePage": 1,
+     "usage": 0
+    },
+    {
+     "usagePage": 65280,
+     "usage": 1
+    }
+   ],
+   "precisionMm": [
+    0.01
+   ],
+   "features": [
+    "GLWRemapkableLightV2",
+    "ViewKeyboardLight"
+   ]
+  },
+  {
+   "key": "0x41E4_0x2116",
+   "vid": "0x41E4",
+   "pid": "0x2116",
+   "id": "ace68pro",
+   "name": "Ace 68",
+   "fullName": "Ace 68 Pro",
+   "storageKey": "Ace 68 Pro",
+   "protocol": "glw",
+   "type": 112,
+   "fwVersion": 121,
+   "bootloader": "0x41E4_0x2117",
+   "wireless": false,
+   "testing": false,
+   "glbKeyboardKey": "Ace68",
+   "hidFilters": [
+    {
+     "usagePage": 1,
+     "usage": 0
+    },
+    {
+     "usagePage": 65280,
+     "usage": 1
+    }
+   ],
+   "precisionMm": [
+    0.01
+   ],
+   "features": [
+    "LTEnabled",
+    "ViewKeyboardLight"
+   ]
+  },
+  {
+   "key": "0x3837_0x3003",
+   "vid": "0x3837",
+   "pid": "0x3003",
+   "id": "ace68pro",
+   "name": "Ace 68",
+   "fullName": "Ace 68(超竞版)",
+   "storageKey": "Ace 68 III",
+   "protocol": "glw",
+   "type": 203,
+   "fwVersion": 113,
+   "bootloader": "0x3837_0x302A",
+   "wireless": false,
+   "testing": false,
+   "glbKeyboardKey": "Ace68",
+   "hidFilters": [
+    {
+     "usagePage": 1,
+     "usage": 0
+    },
+    {
+     "usagePage": 65280,
+     "usage": 1
+    }
+   ],
+   "precisionMm": [
+    0.001,
+    0.005,
+    0.01
+   ],
+   "features": [
+    "precisionConfig"
+   ]
+  },
+  {
+   "key": "0x41E4_0x2120",
+   "vid": "0x41E4",
+   "pid": "0x2120",
+   "id": "ace68air",
+   "name": "Ace 68 Air",
+   "fullName": "Ace 68 Air(电竞版)",
+   "storageKey": "Ace 68 Air II",
+   "protocol": "glw",
+   "type": 106,
+   "fwVersion": 117,
+   "bootloader": "0x41E4_0x2121",
+   "wireless": false,
+   "testing": false,
+   "glbKeyboardKey": "Ace68Air",
+   "hidFilters": [
+    {
+     "usagePage": 1,
+     "usage": 0
+    },
+    {
+     "usagePage": 65280,
+     "usage": 1
+    }
+   ],
+   "precisionMm": [
+    0.01
+   ],
+   "features": [
+    "lightCalibration"
+   ]
+  },
+  {
+   "key": "0x41E4_0x2132",
+   "vid": "0x41E4",
+   "pid": "0x2132",
+   "id": "ace68air",
+   "name": "Ace 68 Air",
+   "fullName": "Ace 68 Air(超竞版)",
+   "storageKey": "Ace 68 Air III",
+   "protocol": "glw",
+   "type": 202,
+   "fwVersion": 116,
+   "bootloader": "0x41E4_0x2133",
+   "wireless": false,
+   "testing": false,
+   "glbKeyboardKey": "Ace68Air",
+   "hidFilters": [
+    {
+     "usagePage": 1,
+     "usage": 0
+    },
+    {
+     "usagePage": 65280,
+     "usage": 1
+    }
+   ],
+   "precisionMm": [
+    0.001,
+    0.005,
+    0.01
+   ],
+   "features": [
+    "lightCalibration"
+   ]
+  },
+  {
+   "key": "0x3837_0x300A",
+   "vid": "0x3837",
+   "pid": "0x300A",
+   "id": "ace68air2",
+   "name": "Ace 68 Air 2",
+   "fullName": "Ace 68 Air 2",
+   "storageKey": "Ace 68 Air 2",
+   "protocol": "glw",
+   "type": 214,
+   "fwVersion": 114,
+   "bootloader": "0x3837_0x300B",
+   "wireless": false,
+   "testing": false,
+   "glbKeyboardKey": "Ace68Air2",
+   "hidFilters": [
+    {
+     "usagePage": 1,
+     "usage": 0
+    },
+    {
+     "usagePage": 65280,
+     "usage": 1
+    }
+   ],
+   "precisionMm": [
+    0.001,
+    0.005,
+    0.01
+   ],
+   "features": [
+    "precisionConfig"
+   ]
+  },
+  {
+   "key": "0x3837_0x3007",
+   "vid": "0x3837",
+   "pid": "0x3007",
+   "id": "ace68pro",
+   "name": "Ace 68 GT",
+   "fullName": "Ace 68 GT",
+   "storageKey": "Ace 68 GT",
+   "protocol": "glw",
+   "type": 213,
+   "fwVersion": 113,
+   "bootloader": "0x3837_0x3009",
+   "wireless": false,
+   "testing": false,
+   "glbKeyboardKey": "Ace68GT",
+   "hidFilters": [
+    {
+     "usagePage": 1,
+     "usage": 0
+    },
+    {
+     "usagePage": 65280,
+     "usage": 1
+    }
+   ],
+   "precisionMm": [
+    0.001,
+    0.005,
+    0.01
+   ],
+   "features": [
+    "RTDoubleClick",
+    "ViewKeyboardLight",
+    "lightCalibration"
+   ]
+  },
+  {
+   "key": "0x3837_0x3026",
+   "vid": "0x3837",
+   "pid": "0x3026",
+   "id": "ace68pro",
+   "name": "Ace 68 Turbo",
+   "fullName": "Ace 68 Turbo(16K)",
+   "storageKey": "Ace 68 Turbo 16K",
+   "protocol": "glw",
+   "type": 211,
+   "fwVersion": 122,
+   "bootloader": "0x3837_0x3027",
+   "wireless": false,
+   "testing": false,
+   "glbKeyboardKey": "Ace68Turbo",
+   "hidFilters": [
+    {
+     "usagePage": 1,
+     "usage": 0
+    },
+    {
+     "usagePage": 65280,
+     "usage": 1
+    }
+   ],
+   "precisionMm": [
+    0.001,
+    0.005,
+    0.01
+   ],
+   "features": [
+    "lightCalibration"
+   ]
+  },
+  {
+   "key": "0x3837_0x3028",
+   "vid": "0x3837",
+   "pid": "0x3028",
+   "id": "ace68pro",
+   "name": "Ace 68 Turbo",
+   "fullName": "Ace 68 Turbo(8K)",
+   "storageKey": "Ace 68 Turbo 8K",
+   "protocol": "glw",
+   "type": 212,
+   "fwVersion": 106,
+   "bootloader": "0x3837_0x3029",
+   "wireless": false,
+   "testing": false,
+   "glbKeyboardKey": "Ace68Turbo",
+   "hidFilters": [
+    {
+     "usagePage": 1,
+     "usage": 0
+    },
+    {
+     "usagePage": 65280,
+     "usage": 1
+    }
+   ],
+   "precisionMm": [
+    0.001,
+    0.005,
+    0.01
+   ],
+   "features": [
+    "SafelyUpdateReportRate",
+    "ViewKeyboardLight"
+   ]
+  },
+  {
+   "key": "0x3837_0x3024",
+   "vid": "0x3837",
+   "pid": "0x3024",
+   "id": "ace68pro",
+   "name": "Ace 68 V2",
+   "fullName": "Ace 68 V2(超竞版)",
+   "storageKey": "Ace 68 V2 III",
+   "protocol": "glw",
+   "type": 210,
+   "fwVersion": 107,
+   "bootloader": "0x3837_0x3025",
+   "wireless": false,
+   "testing": false,
+   "glbKeyboardKey": "Ace68V2",
+   "hidFilters": [
+    {
+     "usagePage": 1,
+     "usage": 0
+    },
+    {
+     "usagePage": 65280,
+     "usage": 1
+    }
+   ],
+   "precisionMm": [
+    0.001,
+    0.005,
+    0.01
+   ],
+   "features": [
+    "precisionConfig"
+   ]
+  },
+  {
+   "key": "0x3837_0x301D",
+   "vid": "0x3837",
+   "pid": "0x301D",
+   "id": "ace75",
+   "name": "Ace 75",
+   "fullName": "Ace 75(16K)",
+   "storageKey": "Ace 75 16K",
+   "protocol": "glw",
+   "type": 135,
+   "fwVersion": 100,
+   "bootloader": "0x3837_0x301F",
+   "wireless": false,
+   "testing": true,
+   "glbKeyboardKey": "Ace75",
+   "hidFilters": [
+    {
+     "usagePage": 1,
+     "usage": 0
+    },
+    {
+     "usagePage": 65280,
+     "usage": 1
+    }
+   ],
+   "precisionMm": [
+    0.001,
+    0.005,
+    0.01
+   ],
+   "features": [
+    "GLWRemapkableLightV2",
+    "LTEnabled",
+    "RTDoubleClick",
+    "SafelyUpdateReportRate",
+    "ViewKeyboardLight",
+    "lightCalibration"
+   ]
+  },
+  {
+   "key": "0x3837_0x303C",
+   "vid": "0x3837",
+   "pid": "0x303C",
+   "id": "ace75",
+   "name": "Ace 75",
+   "fullName": "Ace 75",
+   "storageKey": "Ace 75 8K",
+   "protocol": "glw",
+   "type": 134,
+   "fwVersion": 114,
+   "bootloader": "0x3837_0x303D",
+   "wireless": false,
+   "testing": false,
+   "glbKeyboardKey": "Ace75",
+   "hidFilters": [
+    {
+     "usagePage": 1,
+     "usage": 0
+    },
+    {
+     "usagePage": 65280,
+     "usage": 1
+    }
+   ],
+   "precisionMm": [
+    0.001,
+    0.005,
+    0.01
+   ],
+   "features": [
+    "LTEnabled",
+    "RTDoubleClick",
+    "SafelyUpdateReportRate",
+    "Side2LightColorRangeEnabled",
+    "ViewKeyboardLight",
+    "hasLightScopeType",
+    "lightCalibration"
+   ]
+  },
+  {
+   "key": "0x3837_0x2021",
+   "vid": "0x3837",
+   "pid": "0x2021",
+   "id": "G75V2",
+   "name": "G75 V2",
+   "fullName": "G75 V2(8K)",
+   "storageKey": "G75 V2",
+   "protocol": "glw",
+   "type": 133,
+   "fwVersion": 114,
+   "bootloader": "0x3837_0x2022",
+   "wireless": false,
+   "testing": false,
+   "glbKeyboardKey": "G75V2",
+   "hidFilters": [
+    {
+     "usagePage": 1,
+     "usage": 0
+    },
+    {
+     "usagePage": 65280,
+     "usage": 1
+    }
+   ],
+   "precisionMm": [
+    0.01
+   ],
+   "features": [
+    "GLWRemapkableLightV2",
+    "SafelyUpdateReportRate",
+    "ViewKeyboardLight",
+    "lightCalibration"
+   ],
+   "receivers": [
+    {
+     "vid": "0x3837",
+     "pid": "0x3033",
+     "productName": "MCHOSE G75 V2 2.4G"
+    }
+   ]
+  },
+  {
+   "key": "0x3837_0x2015",
+   "vid": "0x3837",
+   "pid": "0x2015",
+   "id": "K87",
+   "name": "G87 V2",
+   "fullName": "G87 V2(8K)",
+   "storageKey": "G87 V2",
+   "protocol": "glw",
+   "type": 131,
+   "fwVersion": 119,
+   "bootloader": "0x3837_0x2019",
+   "wireless": false,
+   "testing": false,
+   "glbKeyboardKey": "G87V2",
+   "hidFilters": [
+    {
+     "usagePage": 1,
+     "usage": 0
+    },
+    {
+     "usagePage": 65280,
+     "usage": 1
+    }
+   ],
+   "precisionMm": [
+    0.01
+   ],
+   "features": [
+    "GLWRemapkableLightV2",
+    "SafelyUpdateReportRate",
+    "ViewKeyboardLight",
+    "lightCalibration"
+   ],
+   "receivers": [
+    {
+     "vid": "0x3837",
+     "pid": "0x3033",
+     "productName": "MCHOSE G87 V2 2.4G"
+    }
+   ]
+  },
+  {
+   "key": "0x3837_0x2025",
+   "vid": "0x3837",
+   "pid": "0x2025",
+   "id": "G98_V3",
+   "name": "G98 V3",
+   "fullName": "G98 V3",
+   "storageKey": "G98 V3",
+   "protocol": "qhw",
+   "type": 300,
+   "fwVersion": 100,
+   "wireless": false,
+   "testing": false,
+   "glbKeyboardKey": "G98V3",
+   "hidFilters": [
+    {
+     "usagePage": 65408,
+     "usage": 1
+    },
+    {
+     "usagePage": 65408,
+     "usage": 1
+    }
+   ],
+   "precisionMm": [
+    0.01
+   ],
+   "features": [
+    "lightCalibration"
+   ],
+   "receivers": [
+    {
+     "vid": "0x3837",
+     "pid": "0x1015",
+     "productName": "MCHOSE G98 V3 2.4G"
+    }
+   ]
+  },
+  {
+   "key": "0x3837_0x302D",
+   "vid": "0x3837",
+   "pid": "0x302D",
+   "id": "gt75",
+   "name": "GT 75",
+   "fullName": "GT 75",
+   "storageKey": "GT 75",
+   "protocol": "glw",
+   "type": 138,
+   "fwVersion": 100,
+   "bootloader": "0x3837_0x302F",
+   "wireless": false,
+   "testing": true,
+   "glbKeyboardKey": "GT75",
+   "hidFilters": [
+    {
+     "usagePage": 1,
+     "usage": 0
+    },
+    {
+     "usagePage": 65280,
+     "usage": 1
+    }
+   ],
+   "precisionMm": [
+    0.001,
+    0.005,
+    0.01
+   ],
+   "features": [
+    "GLWRemapkableLightV2",
+    "LTEnabled",
+    "OpenMHubAbility",
+    "RTDoubleClick",
+    "RTKeyRemap",
+    "SafelyUpdateReportRate",
+    "TipUnfollowFirst",
+    "ViewKeyboardLight",
+    "hasLightScopeType",
+    "lightCalibration"
+   ]
+  },
+  {
+   "key": "0x3837_0x3020",
+   "vid": "0x3837",
+   "pid": "0x3020",
+   "id": "god60",
+   "name": "God 60",
+   "fullName": "God 60",
+   "storageKey": "God 60",
+   "protocol": "glw",
+   "type": 136,
+   "fwVersion": 100,
+   "bootloader": "0x3837_0x301A",
+   "wireless": false,
+   "testing": true,
+   "maxKeyCount": 128,
+   "glbKeyboardKey": "God60",
+   "hidFilters": [
+    {
+     "usagePage": 1,
+     "usage": 0
+    },
+    {
+     "usagePage": 65280,
+     "usage": 1
+    }
+   ],
+   "precisionMm": [
+    0.001,
+    0.005,
+    0.01
+   ],
+   "features": [
+    "LTEnabled",
+    "RTDoubleClick",
+    "RTKeyRemap",
+    "SafelyUpdateReportRate",
+    "ViewKeyboardLight",
+    "hasLightScopeType",
+    "lightCalibration"
+   ]
+  },
+  {
+   "key": "0x41E4_0x2118",
+   "vid": "0x41E4",
+   "pid": "0x2118",
+   "id": "jet75",
+   "name": "Jet 75",
+   "fullName": "Jet 75",
+   "storageKey": "Jet 75 I",
+   "protocol": "glw",
+   "type": 121,
+   "fwVersion": 109,
+   "minFwVersion": 104,
+   "bootloader": "0x41E4_0x2119",
+   "wireless": false,
+   "testing": false,
+   "glbKeyboardKey": "Jet75",
+   "hidFilters": [
+    {
+     "usagePage": 1,
+     "usage": 0
+    },
+    {
+     "usagePage": 65280,
+     "usage": 1
+    }
+   ],
+   "precisionMm": [
+    0.01
+   ],
+   "features": [
+    "EnableMouseMacro",
+    "GLWRemapkableLightV2",
+    "ViewKeyboardLight"
+   ]
+  },
+  {
+   "key": "0x41E4_0x211A",
+   "vid": "0x41E4",
+   "pid": "0x211A",
+   "id": "jet75",
+   "name": "Jet 75",
+   "fullName": "Jet 75(电竞版)",
+   "storageKey": "Jet 75 II",
+   "protocol": "glw",
+   "type": 122,
+   "fwVersion": 116,
+   "minFwVersion": 108,
+   "bootloader": "0x41E4_0x211B",
+   "wireless": false,
+   "testing": false,
+   "glbKeyboardKey": "Jet75",
+   "hidFilters": [
+    {
+     "usagePage": 1,
+     "usage": 0
+    },
+    {
+     "usagePage": 65280,
+     "usage": 1
+    }
+   ],
+   "precisionMm": [
+    0.005,
+    0.01
+   ],
+   "features": [
+    "lightCalibration"
+   ]
+  },
+  {
+   "key": "0x3837_0x3008",
+   "vid": "0x3837",
+   "pid": "0x3008",
+   "id": "zero75",
+   "name": "Jet 75",
+   "fullName": "Jet 75(超竞版)",
+   "storageKey": "Jet 75 III",
+   "protocol": "glw",
+   "type": 200,
+   "fwVersion": 100,
+   "bootloader": "0x3837_0x302B",
+   "wireless": false,
+   "testing": true,
+   "glbKeyboardKey": "Jet75",
+   "hidFilters": [
+    {
+     "usagePage": 1,
+     "usage": 0
+    },
+    {
+     "usagePage": 65280,
+     "usage": 1
+    }
+   ],
+   "precisionMm": [
+    0.001,
+    0.005,
+    0.01
+   ],
+   "features": [
+    "GLWRemapkableLightV2",
+    "ViewKeyboardLight"
+   ]
+  },
+  {
+   "key": "0x3837_0x2023",
+   "vid": "0x3837",
+   "pid": "0x2023",
+   "id": "K87_V3",
+   "name": "K87 V3",
+   "fullName": "K87 V3",
+   "storageKey": "K87 V3",
+   "protocol": "qhw",
+   "type": 301,
+   "fwVersion": 0,
+   "bootloader": "0x3837_0x2024",
+   "wireless": false,
+   "testing": true,
+   "glbKeyboardKey": "K87V3",
+   "hidFilters": [
+    {
+     "usagePage": 65408,
+     "usage": 1
+    },
+    {
+     "usagePage": 65408,
+     "usage": 1
+    }
+   ],
+   "precisionMm": [
+    0.01
+   ],
+   "features": [
+    "GIFAbility",
+    "GLWRemapkableLightV2",
+    "ProfileReportRate",
+    "SafelyUpdateReportRate",
+    "ViewKeyboardLight",
+    "hasLightScopeType",
+    "lightCalibration"
+   ],
+   "receivers": [
+    {
+     "vid": "0x3837",
+     "pid": "0x1015",
+     "productName": "MCHOSE K87 V3 2.4G"
+    }
+   ]
+  },
+  {
+   "key": "0x3837_0x200E",
+   "vid": "0x3837",
+   "pid": "0x200E",
+   "id": "K87",
+   "name": "K87S",
+   "fullName": "K87S",
+   "storageKey": "K87S",
+   "protocol": "glw",
+   "type": 130,
+   "fwVersion": 142,
+   "bootloader": "0x3837_0x200F",
+   "wireless": false,
+   "testing": false,
+   "glbKeyboardKey": "K87S",
+   "hidFilters": [
+    {
+     "usagePage": 1,
+     "usage": 0
+    },
+    {
+     "usagePage": 65280,
+     "usage": 1
+    }
+   ],
+   "precisionMm": [
+    0.01
+   ],
+   "features": [
+    "lightCalibration"
+   ],
+   "receivers": [
+    {
+     "vid": "0x3837",
+     "pid": "0x3033",
+     "productName": "MCHOSE K87S 2.4G"
+    }
+   ]
+  },
+  {
+   "key": "0x3837_0x2020",
+   "vid": "0x3837",
+   "pid": "0x2020",
+   "id": "K99",
+   "name": "K99 V3",
+   "fullName": "K99 V3",
+   "storageKey": "K99 V3",
+   "protocol": "glw",
+   "type": 132,
+   "fwVersion": 128,
+   "bootloader": "0x3837_0x201F",
+   "wireless": false,
+   "testing": false,
+   "glbKeyboardKey": "K99V3",
+   "hidFilters": [
+    {
+     "usagePage": 1,
+     "usage": 0
+    },
+    {
+     "usagePage": 65280,
+     "usage": 1
+    }
+   ],
+   "precisionMm": [
+    0.01
+   ],
+   "features": [
+    "GLWRemapkableLightV2",
+    "SafelyUpdateReportRate",
+    "ViewKeyboardLight",
+    "lightCalibration"
+   ],
+   "receivers": [
+    {
+     "vid": "0x3837",
+     "pid": "0x3033",
+     "productName": "MCHOSE K99 V3 2.4G"
+    }
+   ]
+  },
+  {
+   "key": "0x41E4_0x2122",
+   "vid": "0x41E4",
+   "pid": "0x2122",
+   "id": "mix87",
+   "name": "Mix 87",
+   "fullName": "Mix 87",
+   "storageKey": "Mix 87 I",
+   "protocol": "glw",
+   "type": 108,
+   "fwVersion": 112,
+   "bootloader": "0x41E4_0x2123",
+   "wireless": false,
+   "testing": false,
+   "glbKeyboardKey": "Mix87",
+   "hidFilters": [
+    {
+     "usagePage": 1,
+     "usage": 0
+    },
+    {
+     "usagePage": 65280,
+     "usage": 1
+    },
+    {
+     "usagePage": 65280,
+     "usage": 1
+    },
+    {
+     "usagePage": 1,
+     "usage": 0
+    }
+   ],
+   "precisionMm": [
+    0.005,
+    0.01
+   ],
+   "features": [
+    "lightCalibration"
+   ]
+  },
+  {
+   "key": "0x3837_0x300D",
+   "vid": "0x3837",
+   "pid": "0x300D",
+   "id": "mix87",
+   "name": "Mix 87",
+   "fullName": "Mix 87(超竞版)",
+   "storageKey": "Mix 87 III",
+   "protocol": "glw",
+   "type": 201,
+   "fwVersion": 122,
+   "minFwVersion": 112,
+   "bootloader": "0x3837_0x302C",
+   "glbKeyboardKey": "Mix87",
+   "hidFilters": [
+    {
+     "usagePage": 1,
+     "usage": 0
+    },
+    {
+     "usagePage": 65280,
+     "usage": 1
+    },
+    {
+     "usagePage": 65280,
+     "usage": 1
+    },
+    {
+     "usagePage": 1,
+     "usage": 0
+    }
+   ],
+   "precisionMm": [
+    0.001,
+    0.005,
+    0.01
+   ],
+   "features": [
+    "lightCalibration"
+   ]
+  },
+  {
+   "key": "0x41E4_0x211C",
+   "vid": "0x41E4",
+   "pid": "0x211C",
+   "id": "zero75",
+   "name": "ZERO 75X",
+   "fullName": "ZERO 75X",
+   "storageKey": "Zero75X",
+   "protocol": "glw",
+   "type": 123,
+   "fwVersion": 114,
+   "bootloader": "0x41E4_0x211D",
+   "wireless": false,
+   "testing": false,
+   "glbKeyboardKey": "ZERO75X",
+   "hidFilters": [
+    {
+     "usagePage": 1,
+     "usage": 0
+    },
+    {
+     "usagePage": 65280,
+     "usage": 1
+    }
+   ],
+   "precisionMm": [
+    0.005,
+    0.01
+   ],
+   "features": [
+    "EnableMouseMacro",
+    "GLWRemapkableLightV2",
+    "ViewKeyboardLight"
+   ]
+  }
+ ]
+}
