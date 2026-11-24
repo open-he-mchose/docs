@@ -33,7 +33,7 @@ Repository: [`open-he-mchose/driver`](https://github.com/open-he-mchose/driver).
 covers what the official driver configures on the Jet75-II, tested on hardware: profiles (switch, rotation, copy),
 report rate, lighting (effects, stored and live colours), trigger settings, keymap, macros, advanced keys (DKS,
 Toggle, Mod-Tap, RS, SOCD, LT), backup / restore, depth stream. ✅ Released:
-[0.2.1](https://github.com/open-he-mchose/driver/releases) for Linux and Windows.
+[0.3.0](https://github.com/open-he-mchose/driver/releases) for Linux and Windows.
 
 - Library + command-line tool in **C++20** (CMake, HID access through hidapi) for **Linux and Windows**.
   macOS is not planned for now (not a primary target).
@@ -57,6 +57,8 @@ Released in 0.2.0 (Windows package; confirmed working on Windows by a user): ite
 actuation and rapid trigger, all layers, macros, advanced keys, profiles, per-key colours, Lua effects, other
 settings, backup / restore.
 
+Items 10–13 released in 0.3.0 (Linux AppImage, depth graph, virtual gamepad, Russian translation). Next: item 9.
+
 Planned, roughly in this order:
 
 | # | Feature | Notes |
@@ -70,10 +72,10 @@ Planned, roughly in this order:
 | 7 ✅ | **Scripted lighting** | See below |
 | 8 ✅ | Other settings | Report rate (the keyboard reboots; reconnect automatically), Win / Alt+Tab / Alt+F4 / Menu locks, Windows / Mac mode |
 | 9 | **Switch calibration** | Guided calibration in the GUI and `mchosectl`: start a session (`0xA8`), show every key's calibration status from the depth stream (byte 10: `00` → `01` → `FF`) on the keyboard view, ask the user to press each key down twice, end the session (`0xA9`). Backup before; "reset calibration" (`0xB1`) only behind a confirmation. See [calibration](protocols/glw/calibration.md) |
-| 10 | Linux AppImage | One-file GUI for any distribution, with the udev rule and install instructions |
-| 11 | Depth graph | Travel of a selected key over time with the actuation and rapid-trigger points |
-| 12 | Gamepad input | Analog keys as a virtual gamepad: key depth → stick axes / triggers, keys → buttons, configurable per key. The firmware has no gamepad mode, so the software reads the depth stream and feeds a virtual controller (Linux: `uinput`; Windows: a virtual-controller driver, to be chosen). The firmware pauses the depth stream for ~0.6 s after every host packet, so it cannot run together with live colours (Lua effects, preview): with the gamepad on, the GUI stops the Lua effect and uses the keyboard's own effect or stored colours |
-| 13 | Translations (low priority) | Russian first (Qt Linguist), language from the system |
+| 10 ✅ | Linux AppImage | One-file GUI for any distribution, with the udev rule and install instructions |
+| 11 ✅ | Depth graph | Travel of a selected key over time with the actuation and rapid-trigger points |
+| 12 ✅ | Gamepad input | Analog keys as a virtual gamepad: key depth → stick axes / triggers, keys → buttons, configurable per key. The firmware has no gamepad mode, so the software reads the depth stream and feeds a virtual controller (Linux: `uinput`; Windows: a virtual-controller driver, to be chosen). The firmware pauses the depth stream for ~0.6 s after every host packet, so it cannot run together with live colours (Lua effects, preview): with the gamepad on, the GUI stops the Lua effect and uses the keyboard's own effect or stored colours |
+| 13 ✅ | Translations | Russian first (Qt Linguist), language from the system |
 
 ### Scripted lighting ✅
 
