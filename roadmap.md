@@ -62,17 +62,20 @@ Planned, roughly in this order:
 | # | Feature | Notes |
 |---|---|---|
 | 1 | GUI builds in CI, release 0.2.0 | Windows: zip with the Qt DLLs (`windeployqt`); Linux: AppImage with the udev rule. Qt linked dynamically (LGPL) |
-| 2 | Layers | Edit the Fn and Mac layers, not only layer 0; warn about the reset codes (Fn+Esc factory reset, Fn+Backspace calibration reset) |
-| 3 | Macro editor | List M1–M16, steps (press / release / delay), record from the keyboard, bind to a key with a play mode (once / hold / toggle / N times) |
-| 4 | Advanced-key editor | DKS drawn as the four press phases, Mod-Tap, Toggle, Snap Tap / RS / LT pairs; shows exactly what is stored; `doctor` highlights broken bindings |
-| 5 | Profiles | Rotation of the next-profile key, copy a profile, names |
-| 6 | Per-key colours | Paint selected keys on the keyboard view; preview with live colours before writing to flash |
-| 7 | **Scripted lighting** | See below |
-| 8 | Other settings | Report rate (the keyboard reboots; reconnect automatically), Win / Alt+Tab / Alt+F4 / Menu locks, Windows / Mac mode |
+| 2 ✅ | Layers | Edit the Fn and Mac layers, not only layer 0; warn about the reset codes (Fn+Esc factory reset, Fn+Backspace calibration reset) |
+| 3 ✅ | Macro editor | List M1–M16, steps (press / release / delay), record from the keyboard, bind to a key with a play mode (once / hold / toggle / N times) |
+| 4 ✅ | Advanced-key editor | DKS drawn as the four press phases, Mod-Tap, Toggle, Snap Tap / RS / LT pairs; shows exactly what is stored; `doctor` highlights broken bindings |
+| 5 ✅ | Profiles | Rotation of the next-profile key, copy a profile, names |
+| 6 ✅ | Per-key colours | Paint selected keys on the keyboard view; preview with live colours before writing to flash |
+| 7 ✅ | **Scripted lighting** | See below |
+| 8 ✅ | Other settings | Report rate (the keyboard reboots; reconnect automatically), Win / Alt+Tab / Alt+F4 / Menu locks, Windows / Mac mode |
 | 9 | Depth graph | Travel of a selected key over time with the actuation and rapid-trigger points |
 | 10 | Translations | Russian first (Qt Linguist), language from the system |
 
-### Scripted lighting (planned)
+### Scripted lighting ✅
+
+Done: `mchosectl light script FILE.lua` and the GUI's Effects tab (editor, parameters, live preview), with six
+examples. Design notes:
 
 Custom effects that run on the computer and are shown with **live colours** (RAM only, no flash wear; the keyboard
 returns to its own effect a few seconds after the script stops).
