@@ -28,7 +28,7 @@ reports but produced no Linux events; with the fix every test macro typed correc
 when the descriptor matches. After loading: SOCD A/D produced **366** events, never both down (last input
 wins); up to **19** keys held at once were reported. Nothing is written to the keyboard; unloading or
 replugging restores the original descriptor. A udev rule can load it on every plug-in.
-Implementation: planned for `open-he-mchose/linux-fixes`.
+Implementation and install instructions: [linux-fixes](https://github.com/open-he-mchose/linux-fixes).
 
 **Affected versions (firmware).** Every Jet75-II application image known: V111 (build Mar 10 2025) to V116
 (Aug 28 2025) all contain the same `81 00` item. Downgrading does not help. The Ace 60 Pro v1.07 image

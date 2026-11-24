@@ -57,7 +57,8 @@ hidapi support it, so it may come later if someone needs it.
 
 ## Alongside
 
-- 📋 `linux-fixes` repository: HID-BPF descriptor fix and udev rules (working locally, to be published).
+- ✅ [`linux-fixes`](https://github.com/open-he-mchose/linux-fixes): HID-BPF descriptor fix (Snap Tap, macros, >6 keys)
+  and udev rules for Linux.
 - 📋 Other MCHOSE magnetic models — needs owners of those keyboards; see
   [keyboards](keyboards/README.md) and open an issue *Add / research a keyboard model*.
 - 📋 `qhw` protocol family (G98 V3, K87 V3).
