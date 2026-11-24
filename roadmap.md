@@ -19,7 +19,7 @@ The reference model: everything the keyboard can do should be documented and ver
 | NKRO descriptor bug (Snap Tap, >6 keys) and Linux fix | ✅ |
 | Macros: storage format, play modes, binding | ✅ |
 | Profiles: switching, base-info fields, notifications | ✅ |
-| Fn-layer special codes | 📋 |
+| Fn-layer special codes | ✅ |
 | Remaining FuncConfig fields, report-rate values | 📋 |
 | Calibration (safely) | 📋 |
 | Firmware update protocol (documented from analysis; not exercised) | 📋 |

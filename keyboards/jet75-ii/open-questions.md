@@ -7,9 +7,9 @@
   untested firmware details (different macro key during playback, modifier left down on early release).
 - **Profiles** — see [profiles](../../protocols/glw/profiles.md). Still open: the unidentified byte 4 of `A3`;
   how the official driver decides to bind `F0 FA` (next profile).
-- **Fn-layer special codes** in the factory Fn layer: `a0`, `32`, `2f`, `36`, `04`, `16`, `15`, `05`, `18`, `1a`,
-  `fe`, `08`, `33`, `3e`, `02` (`F0 xx 00`). The driver has names for them, but what the firmware actually does
-  (handler `fn_6fea`) is not documented yet. Known: `fa` next profile, `ff` Fn.
+- **Special codes** — see [keymap](../../protocols/glw/keymap-and-keycodes.md#special-codes-f0-xx-yy). Still open: the
+  exact behaviour of `F0 03` (WASD swap), `F0 2B` (per-key colour mode) and `F0 3B`; whether the Jet75-II has a
+  visible side light at all (its FuncConfig fields change).
 - **Stream bytes 4–5 and 8**: byte 8 behaves like the rapid-trigger accumulator (**inferred**).
 - **FuncConfig gaps**: bytes 0, 2–3 (marker `AA BB`), 13, 17–19, 21–22, 28, 39, 43, 52–63.
 - **Custom data area** (`0xF1`/`0xF2`): full map of the JSON blobs the driver stores.

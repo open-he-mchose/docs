@@ -50,5 +50,5 @@ Jet 75 Ultra edition (`0x3837:0x3008`) — see [keyboards](../README.md). They a
 | Calibration (`0xA8`/`0xB1`) | **firmware** only (deliberately not exercised: it rewrites stored calibration) |
 | Macros (area, records, play modes) | **verified**; keys reach the host only with the NKRO descriptor fix |
 | Profiles: base info, switching, notifications | **verified** |
-| Fn-layer special codes | driver list known, firmware behaviour not researched |
+| Fn-layer special codes (`F0 xx`) | **verified** for the factory Fn layer; others **firmware** |
 | Firmware update protocol | **driver** / **firmware**, not exercised |

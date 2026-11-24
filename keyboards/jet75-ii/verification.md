@@ -3,7 +3,7 @@
 *AI-generated (Claude, Anthropic); checked on real hardware only where marked **verified**. Report errors via issues.*
 
 Tests run on one Jet75-II, firmware V116, Linux (usbmon / hidraw / evdev), 22 November 2026 (tests 1–20)
-and 24 November 2026 (tests 21–31). Raw captures
+and 24 November 2026 (tests 21–33). Raw captures
 are not published (they contain typed text); results are summarised here.
 
 | # | Test | Method | Result |
@@ -39,3 +39,5 @@ are not published (they contain typed text); results are summarised here.
 | 29 | Host switch | `0x0E`, 1 byte at offset 0: `01`, then `00` | reply, `A1` 1 ms later, `A3` 41 ms later; `0x04` reads back the new position |
 | 30 | Notification layout | compared `A1`/`A3` with FuncConfig of profiles 0 and 1 | `A1`: FuncConfig[1], profile, position, `FF`×4, FuncConfig[8], FuncConfig[13], position; `A3` carries FuncConfig[5…] |
 | 31 | Layer numbering | read all keymaps and FuncConfig byte 1 | FuncConfig[1] = 0/4/8/12; Fn key = `F0 FF (4p+1)` in layer 0 and `F0 FF (4p+3)` in layer 2; factory keymap readable for all 4 layers via `0x07` |
+| 32 | Fn-layer codes | each factory Fn combination pressed once (except Fn+Esc, Fn+Backspace), FuncConfig polled every 0.4 s, `A3` logged | brightness ±, speed, next effect, colour preset (main and side fields), Win lock toggled twice, Mac/Win mode via FuncConfig byte 1; one `A3` per change; brightness+ at maximum changes nothing but still sends `A3`; settings restored, all profiles identical to the backup |
+| 33 | FuncConfig byte 1 bit 0 | after Fn+P / Fn+O | stored as `03` / `01` (Fn held); firmware clears bit 0 at boot and on `0x06` |
