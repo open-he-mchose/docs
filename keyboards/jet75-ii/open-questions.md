@@ -2,7 +2,9 @@
 
 *AI-generated (Claude, Anthropic); checked on real hardware only where marked **verified**. Report errors via issues.*
 
-- **Macros** (`0x0C`/`0x0D`): record format, delays, shared vs per-profile storage, binding (`70 index …`).
+- **Macros** — see [macros](../../protocols/glw/macros.md). Still open: where the official driver keeps macro
+  names and default delays on this model (custom-data offset beyond the per-profile area, or browser storage);
+  untested firmware details (different macro key during playback, modifier left down on early release).
 - **Profiles**: switching via base info (`0x0E`), meaning of all base-info bytes, the unsolicited
   `0xA1`/`0xA4` notifications.
 - **Fn-layer special codes** seen in layer 1: `f0 a0 00`, `f0 32 00` and others besides the known

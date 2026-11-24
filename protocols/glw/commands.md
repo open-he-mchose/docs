@@ -14,7 +14,7 @@ Offsets are byte offsets inside each command's region; "p" = profile 0–3, "l" 
 | `0x07` | R | 3·k (layer 0 at offset 0) | 3/key | factory keymap (constant table) | – | **verified** (layer 0) |
 | `0x08` / `0x09` | R / W | 512·(4p+l) + 3·k | 3/key | user [keymap](keymap-and-keycodes.md) | yes | **verified** |
 | `0x0A` / `0x0B` | R / W | 512·p + 3·k | 3/key | stored per-key colours | yes | **verified** |
-| `0x0C` / `0x0D` | R / W | macro area | ≤ 0x2000 | macros | yes | **driver** |
+| `0x0C` / `0x0D` | R / W | byte offset in the macro area (shared by all profiles) | ≤ 0x2000 | [macros](macros.md) | yes | **verified** |
 | `0xA0` / `0xA1` | R / W | 1024·p + 8·k | 8/key | [trigger settings](key-trigger.md); applied immediately | yes | **verified** |
 | `0xA2` / `0xA3` | R / W | 768·p + 24·slot | 24 | [DKS](advanced-keys.md) table | yes | **verified** |
 | `0xA4` / `0xA5` | R / W | 256·p + 6·slot | 6 | [MT / RS / SOCD / LT](advanced-keys.md) table | yes | **verified** |

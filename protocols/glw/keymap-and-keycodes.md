@@ -17,7 +17,7 @@ layer 1 the Fn layer (**verified**). The factory layer 0 can be read with `0x07`
 | `0x10` | keyboard | modifier bits (`01` LCtrl, `02` LShift, `04` LAlt, `08` LGui, `10` RCtrl, `20` RShift, `40` RAlt, `80` RGui) | HID usage | **verified** |
 | `0x10 00 00` | transparent (in upper layers) | | | **verified** |
 | `0x30` | consumer (media) | usage low byte | usage high byte | **verified** (Mute) |
-| `0x70` | macro | macro index | parameter | **driver** |
+| `0x70` | [macro](macros.md) | macro index 0–15 | play mode: `00` while held, `01`–`FE` play n times, `FF` until pressed again | **verified** |
 | `0x90` | DKS | slot | 0 | **verified** |
 | `0x91` | Toggle | slot | 0 | **verified** |
 | `0x92` | Mod-Tap | slot | hold time / 10 ms | **verified** |

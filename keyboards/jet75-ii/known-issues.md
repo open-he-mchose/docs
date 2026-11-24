@@ -4,7 +4,8 @@
 
 ## 1. NKRO report declared as Array — Snap Tap and >6 keys are lost (firmware V116)
 
-**Symptom.** Snap Tap / SOCD does nothing (also with the official driver on Windows). Pressing more than six
+**Symptom.** Snap Tap / SOCD does nothing (also with the official driver on Windows). Keyboard keys in
+[macros](../../protocols/glw/macros.md) are not typed (only their modifiers arrive). Pressing more than six
 keys at once drops the extra keys.
 
 **Cause.** Interface 2, report ID 1 is a 120-bit bitmap (one bit per usage `0x00–0x7C`) but is declared
@@ -16,11 +17,12 @@ keys at once drops the extra keys.
 ```
 
 With "Array" semantics each set bit is read as array index 1, i.e. usage `0x01` (ErrorRollOver), which hosts
-discard. The firmware sends SOCD keys only through this report, and plain keys only after the 6-key buffer
-is full (**firmware**).
+discard. The firmware sends SOCD keys and macro keys only through this report, and plain keys only after the
+6-key buffer is full (**firmware**).
 
 **Evidence (verified).** Raw reports on interface 2 alternate A/D while SOCD keys are pressed, but Linux
-produced **0** key events for them; the maximum number of keys held at once in Linux was **6**.
+produced **0** key events for them; the maximum number of keys held at once in Linux was **6**. Macro keys likewise appeared in the raw
+reports but produced no Linux events; with the fix every test macro typed correctly.
 
 **Workaround on Linux (verified).** A HID-BPF `hid_rdesc_fixup` that flips byte 23 from `0x00` to `0x02`
 when the descriptor matches. After loading: SOCD A/D produced **366** events, never both down (last input

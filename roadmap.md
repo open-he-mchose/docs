@@ -17,7 +17,7 @@ The reference model: everything the keyboard can do should be documented and ver
 | Key-depth stream (how to enable, packet format, lag-free depth) | ✅ |
 | Advanced keys: DKS, Mod-Tap, Toggle, Rapid Strike, Snap Tap (SOCD), LT | ✅ |
 | NKRO descriptor bug (Snap Tap, >6 keys) and Linux fix | ✅ |
-| Macros: storage format and binding | 📋 |
+| Macros: storage format, play modes, binding | ✅ |
 | Profiles: switching, base-info fields, notifications | 📋 |
 | Fn-layer special codes | 📋 |
 | Remaining FuncConfig fields, report-rate values | 📋 |

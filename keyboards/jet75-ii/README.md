@@ -32,7 +32,7 @@ Jet 75 Ultra edition (`0x3837:0x3008`) — see [keyboards](../README.md). They a
 | [key-matrix.md](key-matrix.md) | Matrix index of every key (needed by all per-key commands), physical layout |
 | [switches-and-travel.md](switches-and-travel.md) | Switch types, max travel, travel curves, precise depth calculation |
 | [firmware.md](firmware.md) | Firmware V116 internals: memory map, flash regions, command handler, depth pipeline, calibration, advanced-key engine |
-| [known-issues.md](known-issues.md) | Bugs: NKRO descriptor (breaks Snap Tap and >6 keys), RS key loss, curve table glitch |
+| [known-issues.md](known-issues.md) | Bugs: NKRO descriptor (breaks Snap Tap, macros and >6 keys), RS key loss, curve table glitch |
 | [verification.md](verification.md) | What was tested on the keyboard, how, and the results |
 | [open-questions.md](open-questions.md) | What is still unknown |
 
@@ -43,10 +43,11 @@ Jet 75 Ultra edition (`0x3837:0x3008`) — see [keyboards](../README.md). They a
 | Framing, commands, info | **verified** |
 | FuncConfig (performance + lighting) | **verified** (read/write/restore) |
 | Per-key trigger settings (sensitivity) | **verified** |
-| Keymap / remap, key code types | **verified** for plain keys, media keys, Fn; macros not tested |
+| Keymap / remap, key code types | **verified** for plain keys, media keys, Fn, macros |
 | Lighting: effects, stored and live colours | **verified** |
 | Depth stream | **verified**, precise lag-free depth implemented |
 | Advanced keys MT / DKS / TGL / RS / LT / SOCD | **verified** (SOCD only with the descriptor fix) |
 | Calibration (`0xA8`/`0xB1`) | **firmware** only (deliberately not exercised: it rewrites stored calibration) |
-| Macros, profile switching, Fn-layer special codes | not researched |
+| Macros (area, records, play modes) | **verified**; keys reach the host only with the NKRO descriptor fix |
+| Profile switching, Fn-layer special codes | not researched |
 | Firmware update protocol | **driver** / **firmware**, not exercised |

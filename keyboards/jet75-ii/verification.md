@@ -2,7 +2,8 @@
 
 *AI-generated (Claude, Anthropic); checked on real hardware only where marked **verified**. Report errors via issues.*
 
-Tests run on one Jet75-II, firmware V116, Linux (usbmon / hidraw / evdev), 22 November 2026. Raw captures
+Tests run on one Jet75-II, firmware V116, Linux (usbmon / hidraw / evdev), 22 November 2026 (tests 1–20)
+and 24 November 2026 (tests 21–27). Raw captures
 are not published (they contain typed text); results are summarised here.
 
 | # | Test | Method | Result |
@@ -27,3 +28,10 @@ are not published (they contain typed text); results are summarised here.
 | 18 | SOCD without fix | A/D, raw reports + evdev | raw reports alternate A/D; **0** Linux events; max 6 keys at once |
 | 19 | SOCD with HID-BPF fix | same | **366** Linux events, never both down; max **19** keys at once |
 | 20 | Fix auto-load | replug with udev rule | descriptor fixed again on the new HID device |
+| 21 | Macro area read | `0x0C`, 8192 bytes | driver layout as documented: 16 offsets → 64, `81 7E`, `"MC"`, cloud-info offset 68; 164 bytes used, rest zero |
+| 22 | Macros without fix | 3 macros on F10–F12 (`70 i 01`), raw reports + evdev | macro keys appear only in the interface-2 NKRO report; **0** Linux key events for them; LShift (boot report) arrived |
+| 23 | Delay unit | macro: A press, 1000 ms, A release | 1.004–1.016 s → 1 ms units |
+| 24 | Macros with fix | same macros, HID-BPF fix loaded | `a`, Shift+`B`, `c` … 1.07 s … `d`; a press + release with delay 0 never appeared |
+| 25 | Mode `03` | 500 ms macro (A 50 ms + 450 ms) | exactly 3 plays, 0.518 s apart |
+| 26 | Mode `00` | same, key held ~2 s | played while held, stopped on release (one 50 ms press cut to 22 ms) |
+| 27 | Mode `FF` | same, press – wait 3.6 s – press | repeated until the second press; settings restored, all 4 profiles and the macro area byte-identical to the backup |
