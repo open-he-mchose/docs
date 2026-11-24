@@ -61,7 +61,7 @@ Planned, roughly in this order:
 
 | # | Feature | Notes |
 |---|---|---|
-| 1 | GUI builds in CI, release 0.2.0 | Windows: zip with the Qt DLLs (`windeployqt`); Linux: AppImage with the udev rule. Qt linked dynamically (LGPL) |
+| 1 ✅ | GUI builds in CI, release 0.2.0 | Done: Windows zip with the Qt DLLs (`windeployqt`), released 0.2.0. Open: Linux AppImage with the udev rule. Qt linked dynamically (LGPL) |
 | 2 ✅ | Layers | Edit the Fn and Mac layers, not only layer 0; warn about the reset codes (Fn+Esc factory reset, Fn+Backspace calibration reset) |
 | 3 ✅ | Macro editor | List M1–M16, steps (press / release / delay), record from the keyboard, bind to a key with a play mode (once / hold / toggle / N times) |
 | 4 ✅ | Advanced-key editor | DKS drawn as the four press phases, Mod-Tap, Toggle, Snap Tap / RS / LT pairs; shows exactly what is stored; `doctor` highlights broken bindings |
