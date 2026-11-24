@@ -4,9 +4,9 @@
 
 ## 1. NKRO report declared as Array — Snap Tap, macros and >6 keys are lost (all firmware V111–V116)
 
-**Symptom.** Snap Tap / SOCD does nothing (also with the official driver on Windows). Keyboard keys in
+**Symptom (Linux).** Snap Tap / SOCD does nothing. Keyboard keys in
 [macros](../../protocols/glw/macros.md) are not typed (only their modifiers arrive). Pressing more than six
-keys at once drops the extra keys.
+keys at once drops the extra keys. On Windows macros and Snap Tap work (see below).
 
 **Cause.** Interface 2, report ID 1 is a 120-bit bitmap (one bit per usage `0x00–0x7C`) but is declared
 `Input(Data,Array)` (`81 00`) instead of `Input(Data,Variable)` (`81 02`):
@@ -34,7 +34,9 @@ Implementation and install instructions: [linux-fixes](https://github.com/open-h
 (Aug 28 2025) all contain the same `81 00` item. Downgrading does not help. The Ace 60 Pro v1.07 image
 bundled with the updater has the same descriptor bug.
 
-**Windows / macOS.** No user-side fix known; only a firmware update from MCHOSE can correct the descriptor.
+**Windows (verified by a user, 2026-11-25).** Macros and Snap Tap / SOCD work on Windows without any fix:
+the Windows HID stack evidently accepts this report despite the `Array` flag. Whether more than six keys at once
+reach Windows has not been tested. **macOS:** not tested.
 
 **Side effect to know.** Once fixed, SOCD bindings that were configured earlier (and silently did nothing)
 start working — check for forgotten bindings in all profiles.

@@ -57,15 +57,16 @@ colours (3 bytes/key) and the depth stream. Slots 80–127 exist in the tables b
 
 ## Physical layout (75 %, 80 keys)
 
-Reconstructed from the keymap (**verified** key set; physical widths **inferred**):
+Key set from the keymap (**verified**); the right-hand column checked on the physical board (**verified**: Delete
+top right, below it Home, PgUp, PgDn); key widths **inferred**:
 
 | Row | Keys |
 |---|---|
-| 1 | Esc, F1–F12, PrtSc, Delete |
-| 2 | `` ` `` 1 2 3 4 5 6 7 8 9 0 - = Backspace PgUp |
-| 3 | Tab Q W E R T Y U I O P [ ] \ PgDn |
-| 4 | CapsLock A S D F G H J K L ; ' Enter |
+| 1 | Esc, F1–F12, Delete |
+| 2 | `` ` `` 1 2 3 4 5 6 7 8 9 0 - = Backspace Home |
+| 3 | Tab Q W E R T Y U I O P [ ] \ PgUp |
+| 4 | CapsLock A S D F G H J K L ; ' Enter PgDn |
 | 5 | LShift Z X C V B N M , . / RShift ↑ |
 | 6 | LCtrl LGui LAlt Space Fn RCtrl ← ↓ → |
 
-There is no Home/End/Insert/RAlt key on the physical board; `Delete`'s Fn layer maps to Insert.
+There is no End/Insert/RAlt/PrtSc key on the physical board; `Delete`'s Fn layer maps to Insert.
