@@ -48,13 +48,15 @@ Writes go through a flash routine (`fn_11e5e`, address ORed with `0x08000000`). 
 | `fn_b8ee` / `fn_b76e` | depth-stream scheduler / packet builder |
 | `fn_7c88` | key action executor (plain keys, media, macros, TGL, MT, RS, SOCD, LT) |
 | `fn_8c3e` | deferred actions (tap/hold timers, toggles) |
+| `fn_6ea4` | profile switch: release keys, load FuncConfig, base layer, triggers, `A1` |
+| `fn_6fea` | special key codes `F0 xx` (Fn layer, next profile, Win/Mac, lighting keys …) |
 | `fn_7814` | macro key handler: start / stop / repeat count by play mode ([macros](../../protocols/glw/macros.md)) |
 | `fn_78d8` | macro player (main loop): reads 4-byte records, NKRO bitmap and modifier byte |
 | `fn_8982` | DKS engine |
 | `fn_761a` | plain key output (6-key buffer first, NKRO bitmap on overflow) |
 | `fn_7a60` | report sender (boot report, NKRO report ID 1, consumer, system, config replies) |
 | `fn_7bb8` | TIM3 tick ISR (tick counter, runs the packet handler and sender) |
-| `fn_1239e` | main-loop deferred flash saver (calibration, base info) |
+| `fn_1239e` | main-loop deferred flash saver: calibration, base info, FuncConfig + `A3`, once no key was pressed for 200 ms |
 
 ## Depth stream
 

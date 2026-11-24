@@ -3,7 +3,7 @@
 *AI-generated (Claude, Anthropic); checked on real hardware only where marked **verified**. Report errors via issues.*
 
 Tests run on one Jet75-II, firmware V116, Linux (usbmon / hidraw / evdev), 22 November 2026 (tests 1–20)
-and 24 November 2026 (tests 21–27). Raw captures
+and 24 November 2026 (tests 21–31). Raw captures
 are not published (they contain typed text); results are summarised here.
 
 | # | Test | Method | Result |
@@ -35,3 +35,7 @@ are not published (they contain typed text); results are summarised here.
 | 25 | Mode `03` | 500 ms macro (A 50 ms + 450 ms) | exactly 3 plays, 0.518 s apart |
 | 26 | Mode `00` | same, key held ~2 s | played while held, stopped on release (one 50 ms press cut to 22 ms) |
 | 27 | Mode `FF` | same, press – wait 3.6 s – press | repeated until the second press; settings restored, all 4 profiles and the macro area byte-identical to the backup |
+| 28 | Profile key | Fn+Enter (`F0 FA 00`) twice, config-interface reports logged | profile 0 → 1 → 0; `A1` at once, `A3` ~0.3 s later; base info position stored (`01`, then `00`) |
+| 29 | Host switch | `0x0E`, 1 byte at offset 0: `01`, then `00` | reply, `A1` 1 ms later, `A3` 41 ms later; `0x04` reads back the new position |
+| 30 | Notification layout | compared `A1`/`A3` with FuncConfig of profiles 0 and 1 | `A1`: FuncConfig[1], profile, position, `FF`×4, FuncConfig[8], FuncConfig[13], position; `A3` carries FuncConfig[5…] |
+| 31 | Layer numbering | read all keymaps and FuncConfig byte 1 | FuncConfig[1] = 0/4/8/12; Fn key = `F0 FF (4p+1)` in layer 0 and `F0 FF (4p+3)` in layer 2; factory keymap readable for all 4 layers via `0x07` |

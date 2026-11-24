@@ -7,7 +7,7 @@ Read with `0x05`, write with `0x06`, offset `64 × profile`. Field layout from t
 
 | Byte | Bits | Field | Evidence |
 |---|---|---|---|
-| 1 | 0–3 | macMode | **driver** |
+| 1 | | base layer as an absolute layer number: `4 × profile`, + 2 in Mac mode (driver: "macMode"); recomputed by the firmware on every [profile switch](profiles.md#layers-and-funcconfig-byte-1) | **verified** (values), **firmware** |
 | 2–3 | | marker `AA BB` (firmware treats the block as valid only with it) | **verified**, **firmware** |
 | 4 | 0–3 | reportRate — **changing it reboots the keyboard** | **driver**, **firmware** |
 | 4 | 4–7 | tickRate | **driver** |

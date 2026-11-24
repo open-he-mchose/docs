@@ -9,9 +9,9 @@ Offsets are byte offsets inside each command's region; "p" = profile 0–3, "l" 
 |---|---|---|---|---|---|---|
 | `0x01` / `0x02` | W | 0 | 0 | set / clear a host flag (purpose unknown) | no | **firmware** |
 | `0x03` | R | 0 | 56 | info: version (LE u16), build date string | – | **verified** |
-| `0x04` / `0x0E` | R / W | 0 | 56 | base info (active profile, profile count/order); `0x0E` reloads the profile | yes | **driver**, **firmware** |
+| `0x04` / `0x0E` | R / W | 0 | 56 | [base info](profiles.md) (active position, rotation length, profile order); `0x0E` switches the profile if the active one changes | yes | **verified** |
 | `0x05` / `0x06` | R / W | 64·p | 64 | [FuncConfig](funcconfig.md); `0x06` reloads the active profile, reboots if the report rate changes | yes | **verified** |
-| `0x07` | R | 3·k (layer 0 at offset 0) | 3/key | factory keymap (constant table) | – | **verified** (layer 0) |
+| `0x07` | R | 512·l + 3·k | 3/key | factory keymap, 4 layers (constant table) | – | **verified** |
 | `0x08` / `0x09` | R / W | 512·(4p+l) + 3·k | 3/key | user [keymap](keymap-and-keycodes.md) | yes | **verified** |
 | `0x0A` / `0x0B` | R / W | 512·p + 3·k | 3/key | stored per-key colours | yes | **verified** |
 | `0x0C` / `0x0D` | R / W | byte offset in the macro area (shared by all profiles) | ≤ 0x2000 | [macros](macros.md) | yes | **verified** |
@@ -35,10 +35,10 @@ Bootloader packets (header `0x5F` and raw `0x80–0x84`) are described in [firmw
 | First bytes | Meaning | Evidence |
 |---|---|---|
 | `A0 …` | depth stream packet ([depth-stream](depth-stream.md)) | **verified** |
-| `A1 xx` | profile switched to `xx` | **driver** |
-| `A4 xx` | profile about to switch | **driver** |
+| `A1 …` | profile switched ([layout](profiles.md#notifications)) | **verified** |
+| `A4 xx` | profile about to switch — not sent by Jet75-II V116 | **driver** |
 | `A2` or `FA FB FF` | reset | **driver** |
-| `A3 …` | FuncConfig changed on the keyboard | **driver** |
+| `A3 …` | FuncConfig saved by the keyboard (after a profile switch or on-keyboard changes) | **verified** |
 | `AA FA …` | light change | **driver** |
 | `FA FB 07 bb 01/00` | charging / not charging, battery level `bb` (wireless models) | **driver** |
 | `FA FB 06 01/00` | start / stop communication | **driver** |

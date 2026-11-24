@@ -28,6 +28,7 @@ other models may differ in table sizes, key count and supported features.
 | [lighting.md](lighting.md) | Effects, stored per-key colours, live colours (with a byte-by-byte example) |
 | [depth-stream.md](depth-stream.md) | Key-depth streaming: how to enable it and the packet format |
 | [advanced-keys.md](advanced-keys.md) | DKS, Mod-Tap, Toggle, Rapid Strike, Snap Tap (SOCD), LT |
+| [profiles.md](profiles.md) | Base info, switching from the host or a key, layers, `A1`/`A3` notifications |
 | [macros.md](macros.md) | Macro area layout, 4-byte action records, play modes, how macro keys reach the host |
 | [calibration.md](calibration.md) | Calibration commands and why to avoid them in tools |
 | [firmware-update.md](firmware-update.md) | Bootloader packets (not exercised) |

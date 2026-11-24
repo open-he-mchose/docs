@@ -7,7 +7,8 @@
 Each profile has 4 layers; each layer is a 512-byte area with 3 bytes per key matrix index
 (128 slots, Jet75-II uses 0–79). Read a layer with `0x08` at offset `512 × (4 × profile + layer)`, write one key
 with `0x09` (3 bytes) at `512 × (4 × profile + layer) + 3 × key` (**verified**). Layer 0 is the base layer,
-layer 1 the Fn layer (**verified**). The factory layer 0 can be read with `0x07` (**verified**).
+layer 1 the Fn layer, layer 2 the Mac layer (**verified**, **firmware**). The factory keymap (all 4 layers) can be read with
+`0x07` at offset `512 × layer` (**verified**).
 
 ## Key code `[type, code1, code2]`
 
@@ -24,7 +25,7 @@ layer 1 the Fn layer (**verified**). The factory layer 0 can be read with `0x07`
 | `0x93` | Rapid Strike | slot | partner key index | **verified** |
 | `0x94` | Snap Tap (SOCD) | slot | partner key index | **verified** |
 | `0x95` | LT (release one → tap the other) | slot | partner key index | **verified** |
-| `0xF0` | special | `FF` = Fn / layer, code2 = layer; `FA` rapid-trigger toggle; `34` brightness; `1E` BackHome | | **driver**, **verified** (Fn) |
+| `0xF0` | special | `FF` = Fn / layer, code2 = absolute layer `4 × profile + layer`; `FA` = next [profile](profiles.md); `34` brightness; `1E` BackHome | | **driver**, **verified** (Fn, `FA`) |
 | `F0 F0 F0` | unused slot | | | **verified** |
 
 Combinations are allowed: `10 03 06` = Ctrl+Shift+C (**verified** with Ctrl+Shift+T).

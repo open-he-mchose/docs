@@ -5,10 +5,11 @@
 - **Macros** — see [macros](../../protocols/glw/macros.md). Still open: where the official driver keeps macro
   names and default delays on this model (custom-data offset beyond the per-profile area, or browser storage);
   untested firmware details (different macro key during playback, modifier left down on early release).
-- **Profiles**: switching via base info (`0x0E`), meaning of all base-info bytes, the unsolicited
-  `0xA1`/`0xA4` notifications.
-- **Fn-layer special codes** seen in layer 1: `f0 a0 00`, `f0 32 00` and others besides the known
-  `f0 fa 00` (rapid-trigger toggle), `f0 34 00` (brightness), `f0 1e 00` (BackHome).
+- **Profiles** — see [profiles](../../protocols/glw/profiles.md). Still open: the unidentified byte 4 of `A3`;
+  how the official driver decides to bind `F0 FA` (next profile).
+- **Fn-layer special codes** in the factory Fn layer: `a0`, `32`, `2f`, `36`, `04`, `16`, `15`, `05`, `18`, `1a`,
+  `fe`, `08`, `33`, `3e`, `02` (`F0 xx 00`). The driver has names for them, but what the firmware actually does
+  (handler `fn_6fea`) is not documented yet. Known: `fa` next profile, `ff` Fn.
 - **Stream bytes 4–5 and 8**: byte 8 behaves like the rapid-trigger accumulator (**inferred**).
 - **FuncConfig gaps**: bytes 0, 2–3 (marker `AA BB`), 13, 17–19, 21–22, 28, 39, 43, 52–63.
 - **Custom data area** (`0xF1`/`0xF2`): full map of the JSON blobs the driver stores.
