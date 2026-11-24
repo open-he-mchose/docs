@@ -77,21 +77,23 @@ Planned, roughly in this order:
 Custom effects that run on the computer and are shown with **live colours** (RAM only, no flash wear; the keyboard
 returns to its own effect a few seconds after the script stops).
 
-- **Language: JavaScript** (Qt's built-in engine in the GUI), so no extra runtime is needed on Windows. The same
-  script API is meant for `mchosectl light script FILE` later (with a small embedded engine such as QuickJS),
-  keeping `core` free of script dependencies.
-- **Script API (draft):** the script defines `frame(t, dt, keys, input)` and returns one colour per key, called
-  ~25–30 times per second (the rate tested on the keyboard). `keys` gives each key's matrix index, name and
-  position in key units (from the model layout) so effects can be spatial (waves, ripples); `input` holds the keys
-  pressed since the last frame. Helpers: `hsv()`, `mix()`, `rgb()`; optional `init()` and user parameters
-  (speed, colours) shown as controls in the GUI.
+- **Language: Lua** (5.4, MIT, embedded in the program): no runtime to install on Windows, small and fast, and
+  independent of Qt, so the **same engine and the same scripts** work in the GUI and in `mchosectl light script FILE`.
+  It lives in its own module of the driver (`core` stays free of dependencies).
+- **Script API (draft):** the script defines `frame(ctx)`, called ~25–30 times per second (the rate tested on the
+  keyboard), and sets colours with `ctx.set(key, r, g, b)` or by returning a table of colours. `ctx.t` / `ctx.dt` give
+  the time, `ctx.keys` each key's matrix index, name and position in key units (from the model layout) so effects can
+  be spatial (waves, ripples), `ctx.pressed` / `ctx.released` the keys since the last frame. Helpers: `hsv()`, `mix()`,
+  `rgb()`; optional `init(ctx)` and user parameters (speed, colours) shown as controls in the GUI.
+- **Sandbox:** only safe standard libraries (no `io`, `os`, no native modules); a per-frame instruction limit stops
+  runaway scripts.
 - **Reacting to key presses** uses the operating system's key events (Linux: evdev with the existing udev access
   rule; Windows: raw input), because the keyboard's depth stream pauses while colours are being sent. So effects can
   react to presses and releases, **not to key depth**.
 - **Built-in examples:** typing ripple, heat map of key usage, fire, rain, Game of Life, audio level meter (later).
-- **Safety:** scripts only produce colours; they cannot write settings to the keyboard. A script that throws or
-  takes too long is stopped and the keyboard falls back to its stored effect.
-- Editor in the GUI with live reload, a gallery of example effects, import / export of `.js` files.
+- **Safety:** scripts only produce colours; they cannot write settings to the keyboard. A script that raises an
+  error or exceeds the instruction limit is stopped and the keyboard falls back to its stored effect.
+- Editor in the GUI with live reload, a gallery of example effects, import / export of `.lua` files.
 
 ## Alongside
 
