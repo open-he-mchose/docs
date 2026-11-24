@@ -3,7 +3,7 @@
 *AI-generated (Claude, Anthropic); checked on real hardware only where marked **verified**. Report errors via issues.*
 
 Tests run on one Jet75-II, firmware V116, Linux (usbmon / hidraw / evdev), 22 November 2026 (tests 1–20)
-and 24 November 2026 (tests 21–35). Raw captures
+and 24 November 2026 (tests 21–36). Raw captures
 are not published (they contain typed text); results are summarised here.
 
 | # | Test | Method | Result |
@@ -43,3 +43,4 @@ are not published (they contain typed text); results are summarised here.
 | 33 | FuncConfig byte 1 bit 0 | after Fn+P / Fn+O | stored as `03` / `01` (Fn held); firmware clears bit 0 at boot and on `0x06` |
 | 34 | Report rate field | FuncConfig byte 4 vs `lsusb` | value 2 on the active profile, `bInterval` 2 on all four endpoints (High-Speed) = 4 kHz |
 | 35 | Report rate on profile switch | profile 0 (rate 2) → profile 2 (stored rate 1) via `0x0E` → back | `bInterval` stayed 2; profile 2's stored byte 4 became 2; restoring it with `0x06` while profile 0 was active caused no reboot; all profiles identical to the backup afterwards |
+| 36 | NKRO fix after a keyboard reboot | report rate changed twice with the open driver (keyboard reboots each time) | udev re-attached the HID-BPF fix to the new HID device both times (`mchose-nkro-fix log`) |

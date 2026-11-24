@@ -29,9 +29,10 @@ Details: [Jet75-II open questions](keyboards/jet75-ii/open-questions.md).
 
 ## 2. Open driver 🚧
 
-Repository: [`open-he-mchose/driver`](https://github.com/open-he-mchose/driver). First milestone done: protocol
-core, `mchosectl` (info, profiles, keymap, triggers, lighting, macros, backup / restore, depth stream), unit tests,
-Linux and Windows CI builds.
+Repository: [`open-he-mchose/driver`](https://github.com/open-he-mchose/driver). The `mchosectl` command-line tool
+covers what the official driver configures on the Jet75-II, tested on hardware: profiles (switch, rotation, copy),
+report rate, lighting (effects, stored and live colours), trigger settings, keymap, macros, advanced keys (DKS,
+Toggle, Mod-Tap, RS, SOCD, LT), backup / restore, depth stream. Linux and Windows CI builds. Next: releases.
 
 - Library + command-line tool in **C++20** (CMake, HID access through hidapi) for **Linux and Windows**.
   macOS is not planned for now (not a primary target).
