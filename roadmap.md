@@ -23,7 +23,7 @@ The reference model: everything the keyboard can do should be documented and ver
 | Remaining FuncConfig fields, report-rate values | ✅ |
 | Calibration (safely) | 📋 |
 | Firmware update protocol (documented from analysis; not exercised) | 📋 |
-| Earlier firmware versions (V111–V115) | 📋 |
+| Earlier firmware versions (V111–V115) | ✅ |
 
 Details: [Jet75-II open questions](keyboards/jet75-ii/open-questions.md).
 

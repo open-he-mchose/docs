@@ -5,8 +5,8 @@
 ## Images
 
 - The Windows "FirmwareUpdateTool" for Jet75-II (MFC, 32-bit) embeds two raw images as PE resources of type
-  `BIN`: the keyboard application (changes per version) and a second image labelled "Ace 60 Pro"
-  (identical in every version).
+  `BIN`: the keyboard application (changes per version) and the Ace 60 Pro application v1.07 (PID `0x2103`, identical
+  in every version, most likely unused; see [Jet75-II firmware versions](../keyboards/jet75-ii/firmware.md#firmware-versions)).
 - The web driver's device table points to an update image per model on the vendor CDN; for Jet75-II it
   is the V116 application, identical in layout to the embedded ones.
 - Images are **not encrypted** (entropy ≈ 4.7–4.9, readable strings such as "MCHOSE", "Jet75-II",

@@ -17,6 +17,5 @@
 - **Custom data area** (`0xF1`/`0xF2`): full map of the JSON blobs the driver stores.
 - **Calibration** not exercised on hardware (deliberately: it rewrites stored calibration).
 - **Firmware update protocol**: packet sequence known from the driver/firmware, never exercised.
-- **Earlier firmware**: is the NKRO descriptor correct in V111–V115 (images embedded in the Windows updater)?
-- **Second image in the Windows updater**: besides the Jet75-II application, every updater version bundles
-  an identical second image whose strings say "Ace 60 Pro" — purpose unknown.
+- **Updater image selection**: confirm by decompiling the updater that the bundled Ace 60 Pro image is never
+  flashed to a Jet75-II.

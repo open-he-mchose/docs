@@ -15,7 +15,7 @@
 | MCU | WCH CH32V30x family (QingKe RISC-V, USB High-Speed) | **firmware** (peripheral addresses), **inferred** exact part |
 | Firmware tested | V116, build "Aug 28 2025 10:45:06" (reported by command `0x03`) | **verified** |
 | Firmware known to driver | newest `116`, minimum supported `108` | **driver** |
-| Other images seen | V111–V115 embedded in the Windows "FirmwareUpdateTool" | **firmware** |
+| Other images seen | V111–V115 embedded in the Windows "FirmwareUpdateTool" ([versions](firmware.md#firmware-versions)) | **firmware** |
 | Polling | report-rate field in FuncConfig; High-Speed USB (8 kHz class) | **firmware**, **inferred** rate |
 | Keys / layers / profiles | 80 keys (tables sized for 128), 4 layers, 4 on-board profiles | **verified** |
 | Switch type | type 0 in all trigger entries (max travel 3.41 mm) | **verified** |

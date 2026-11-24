@@ -6,6 +6,25 @@ All facts on this page are **firmware** (static analysis of the official V116 ap
 "Aug 28 2025 10:45:06" — the same build the keyboard reports) unless labelled otherwise. Function names
 are Ghidra's auto names in an ELF built with base `0x5000`; see [reverse-engineering/firmware-analysis.md](../../reverse-engineering/firmware-analysis.md).
 
+## Firmware versions
+
+Application images examined: V111–V115 from the Windows updaters, V116 from the vendor CDN and the
+keyboard itself. The version is also the USB `bcdDevice` (`0x0111` … `0x0116`).
+
+| Version | Build date | NKRO descriptor bug (`81 00`) |
+|---|---|---|
+| V111 | Mar 10 2025 | yes |
+| V112 | Apr 7 2025 | yes |
+| V113 | Jun 11 2025 | yes |
+| V114 | Jul 3 2025 | yes |
+| V115 | Jul 16 2025 | yes |
+| V116 | Aug 28 2025 | yes (**verified** on the keyboard) |
+
+Every updater version also bundles the same **Ace 60 Pro** application v1.07 (USB PID `0x2103`, bootloader
+PID `0x2104`, product string "Ace 60 Pro", build Nov 8 2024). The updater's code references only the
+Jet75-II IDs (`0x211A`, bootloader `0x211B`), so that image is most likely a leftover from the tool's template
+(**inferred**; the image-selection code was not decompiled).
+
 ## Platform
 
 - WCH CH32V30x family, QingKe RISC-V (RV32IMAC + WCH "XW" compressed byte/half load/store).

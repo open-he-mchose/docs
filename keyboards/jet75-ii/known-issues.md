@@ -2,7 +2,7 @@
 
 *AI-generated (Claude, Anthropic); checked on real hardware only where marked **verified**. Report errors via issues.*
 
-## 1. NKRO report declared as Array — Snap Tap and >6 keys are lost (firmware V116)
+## 1. NKRO report declared as Array — Snap Tap, macros and >6 keys are lost (all firmware V111–V116)
 
 **Symptom.** Snap Tap / SOCD does nothing (also with the official driver on Windows). Keyboard keys in
 [macros](../../protocols/glw/macros.md) are not typed (only their modifiers arrive). Pressing more than six
@@ -29,6 +29,10 @@ when the descriptor matches. After loading: SOCD A/D produced **366** events, ne
 wins); up to **19** keys held at once were reported. Nothing is written to the keyboard; unloading or
 replugging restores the original descriptor. A udev rule can load it on every plug-in.
 Implementation: planned for `open-he-mchose/linux-fixes`.
+
+**Affected versions (firmware).** Every Jet75-II application image known: V111 (build Mar 10 2025) to V116
+(Aug 28 2025) all contain the same `81 00` item. Downgrading does not help. The Ace 60 Pro v1.07 image
+bundled with the updater has the same descriptor bug.
 
 **Windows / macOS.** No user-side fix known; only a firmware update from MCHOSE can correct the descriptor.
 
