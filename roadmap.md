@@ -20,7 +20,7 @@ The reference model: everything the keyboard can do should be documented and ver
 | Macros: storage format, play modes, binding | ✅ |
 | Profiles: switching, base-info fields, notifications | ✅ |
 | Fn-layer special codes | ✅ |
-| Remaining FuncConfig fields, report-rate values | 📋 |
+| Remaining FuncConfig fields, report-rate values | ✅ |
 | Calibration (safely) | 📋 |
 | Firmware update protocol (documented from analysis; not exercised) | 📋 |
 | Earlier firmware versions (V111–V115) | 📋 |

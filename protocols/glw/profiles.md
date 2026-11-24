@@ -48,6 +48,11 @@ is out of range, it "repairs" the block by activating `order[0]`.
 | Host | write the new position with `0x0E` (a 1-byte write at offset 0 is enough). Nothing happens if the active profile stays the same | **verified** |
 | Keyboard | key code `F0 FA 00` = **next profile**: position = (position + 1) mod length | **verified** (Fn+Enter) |
 
+A host write may also select a position **outside the rotation** (position ≥ length): the firmware switches to
+that profile at once (**verified**: position 2 with length 2 activated profile 2). The stored position is then
+invalid. At the next boot the firmware falls back to position 0, and the official driver "repairs" the block.
+Increase the length instead if the profile should stay reachable.
+
 `F0 FA 00` is not in the factory keymap. On the test keyboard it was bound to Fn+Enter in profiles 0 and 1,
 presumably by the official driver. The driver's key list labels code `FA` "RT", but the firmware and the test
 show that it switches the profile.
@@ -57,7 +62,8 @@ show that it switches the profile.
 1. Releases all keys (clears the 6-key buffer, the NKRO bitmap and the modifiers).
 2. Loads the new profile's FuncConfig into RAM and resets the current layer to the profile's base layer
    (FuncConfig byte 1, see [below](#layers-and-funcconfig-byte-1)).
-3. Re-applies the trigger table and updates the lighting.
+3. Re-applies the trigger table and updates the lighting. The report rate is **not** changed: the new
+   profile's stored rate is overwritten with the current one ([report rate](funcconfig.md#report-rate)).
 4. Sends the [`A1` notification](#notifications).
 5. As soon as no key has been pressed for 200 ms, it saves base info **and the new profile's FuncConfig** to
    flash and sends `A3`.

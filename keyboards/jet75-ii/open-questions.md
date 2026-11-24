@@ -11,11 +11,12 @@
   exact behaviour of `F0 03` (WASD swap), `F0 2B` (per-key colour mode) and `F0 3B`; whether the Jet75-II has a
   visible side light at all (its FuncConfig fields change).
 - **Stream bytes 4–5 and 8**: byte 8 behaves like the rapid-trigger accumulator (**inferred**).
-- **FuncConfig gaps**: bytes 0, 2–3 (marker `AA BB`), 13, 17–19, 21–22, 28, 39, 43, 52–63.
+- **FuncConfig**: meaning of the other bits of byte 0 (`50` on all profiles; the bootloader may read them);
+  the firmware's debounce table values; what "bottom rapid-trigger mode" changes exactly. The remaining
+  undocumented bytes are not read by the Jet75-II firmware.
 - **Custom data area** (`0xF1`/`0xF2`): full map of the JSON blobs the driver stores.
 - **Calibration** not exercised on hardware (deliberately: it rewrites stored calibration).
 - **Firmware update protocol**: packet sequence known from the driver/firmware, never exercised.
 - **Earlier firmware**: is the NKRO descriptor correct in V111–V115 (images embedded in the Windows updater)?
-- **Report rate** values of the FuncConfig nibble and the `tickRate` nibble.
 - **Second image in the Windows updater**: besides the Jet75-II application, every updater version bundles
   an identical second image whose strings say "Ace 60 Pro" — purpose unknown.
