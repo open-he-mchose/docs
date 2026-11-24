@@ -27,9 +27,11 @@ The reference model: everything the keyboard can do should be documented and ver
 
 Details: [Jet75-II open questions](keyboards/jet75-ii/open-questions.md).
 
-## 2. Open driver 📋
+## 2. Open driver 🚧
 
-Repository: `open-he-mchose/driver` (planned).
+Repository: [`open-he-mchose/driver`](https://github.com/open-he-mchose/driver). First milestone done: protocol
+core, `mchosectl` (info, profiles, keymap, triggers, lighting, macros, backup / restore, depth stream), unit tests,
+Linux and Windows CI builds.
 
 - Library + command-line tool in **C++20** (CMake, HID access through hidapi) for **Linux and Windows**.
   macOS is not planned for now (not a primary target).
