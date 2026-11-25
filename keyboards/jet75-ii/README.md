@@ -47,7 +47,7 @@ Jet 75 Ultra edition (`0x3837:0x3008`) — see [keyboards](../README.md). They a
 | Lighting: effects, stored and live colours | **verified** |
 | Depth stream | **verified**, precise lag-free depth implemented |
 | Advanced keys MT / DKS / TGL / RS / LT / SOCD | **verified** (SOCD only with the descriptor fix) |
-| Calibration (`0xA8`/`0xB1`) | **firmware** only (deliberately not exercised: it rewrites stored calibration) |
+| Calibration (`0xA8`/`0xA9`) | **verified** 2026-11-25 (guided calibration of all keys with the open driver); `0xB1` reset: **firmware** only |
 | Macros (area, records, play modes) | **verified**; keys reach the host only with the NKRO descriptor fix |
 | Profiles: base info, switching, notifications | **verified** |
 | Fn-layer special codes (`F0 xx`) | **verified** for the factory Fn layer; others **firmware** |

@@ -21,7 +21,7 @@ The reference model: everything the keyboard can do should be documented and ver
 | Profiles: switching, base-info fields, notifications | ✅ |
 | Fn-layer special codes | ✅ |
 | Remaining FuncConfig fields, report-rate values | ✅ |
-| Calibration (safely) | 📋 next — see GUI item 9 |
+| Calibration (safely) | ✅ guided calibration verified (GUI item 9); reset `0xB1` not exercised |
 | Firmware update protocol (documented from analysis; not exercised) | 📋 |
 | Earlier firmware versions (V111–V115) | ✅ |
 
@@ -57,7 +57,7 @@ Released in 0.2.0 (Windows package; confirmed working on Windows by a user): ite
 actuation and rapid trigger, all layers, macros, advanced keys, profiles, per-key colours, Lua effects, other
 settings, backup / restore.
 
-Items 10–13 released in 0.3.0 (Linux AppImage, depth graph, virtual gamepad, Russian translation). 0.3.1: one program per user with a background mode (tray where available), the running effect and script parameters restored on connect, start at login. Next: item 9.
+Items 10–13 released in 0.3.0 (Linux AppImage, depth graph, virtual gamepad, Russian translation). 0.3.1: one program per user with a background mode (tray where available), the running effect and script parameters restored on connect, start at login. Item 9 (switch calibration) done after 0.3.1, hardware-tested on all keys.
 
 Planned, roughly in this order:
 
@@ -71,7 +71,7 @@ Planned, roughly in this order:
 | 6 ✅ | Per-key colours | Paint selected keys on the keyboard view; preview with live colours before writing to flash |
 | 7 ✅ | **Scripted lighting** | See below |
 | 8 ✅ | Other settings | Report rate (the keyboard reboots; reconnect automatically), Win / Alt+Tab / Alt+F4 / Menu locks, Windows / Mac mode |
-| 9 | **Switch calibration** | Guided calibration in the GUI and `mchosectl`: start a session (`0xA8`), show every key's calibration status from the depth stream (byte 10: `00` → `01` → `FF`) on the keyboard view, ask the user to press each key down twice, end the session (`0xA9`). Backup before; "reset calibration" (`0xB1`) only behind a confirmation. See [calibration](protocols/glw/calibration.md) |
+| 9 ✅ | **Switch calibration** | Guided calibration in the GUI and `mchosectl`: start a session (`0xA8`), show every key's calibration status from the depth stream (byte 10: `00` → `01` → `FF`) on the keyboard view, ask the user to press each key down twice, end the session (`0xA9`). Backup before; "reset calibration" (`0xB1`) only behind a confirmation. See [calibration](protocols/glw/calibration.md) |
 | 10 ✅ | Linux AppImage | One-file GUI for any distribution, with the udev rule and install instructions |
 | 11 ✅ | Depth graph | Travel of a selected key over time with the actuation and rapid-trigger points |
 | 12 ✅ | Gamepad input | Analog keys as a virtual gamepad: key depth → stick axes / triggers, keys → buttons, configurable per key. The firmware has no gamepad mode, so the software reads the depth stream and feeds a virtual controller (Linux: `uinput`; Windows: a virtual-controller driver, to be chosen). The firmware pauses the depth stream for ~0.6 s after every host packet, so it cannot run together with live colours (Lua effects, preview): with the gamepad on, the GUI stops the Lua effect and uses the keyboard's own effect or stored colours |

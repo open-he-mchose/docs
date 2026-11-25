@@ -15,7 +15,7 @@
   the firmware's debounce table values; what "bottom rapid-trigger mode" changes exactly. The remaining
   undocumented bytes are not read by the Jet75-II firmware.
 - **Custom data area** (`0xF1`/`0xF2`): full map of the JSON blobs the driver stores.
-- **Calibration** not exercised on hardware (deliberately: it rewrites stored calibration).
+- **Calibration reset** (`0xB1`) not exercised on hardware (the session commands `0xA8`/`0xA9` are verified).
 - **Firmware update protocol**: packet sequence known from the driver/firmware, never exercised.
 - **Updater image selection**: confirm by decompiling the updater that the bundled Ace 60 Pro image is never
   flashed to a Jet75-II.
