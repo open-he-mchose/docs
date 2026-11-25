@@ -33,7 +33,7 @@ Repository: [`open-he-mchose/driver`](https://github.com/open-he-mchose/driver).
 covers what the official driver configures on the Jet75-II, tested on hardware: profiles (switch, rotation, copy),
 report rate, lighting (effects, stored and live colours), trigger settings, keymap, macros, advanced keys (DKS,
 Toggle, Mod-Tap, RS, SOCD, LT), backup / restore, depth stream. ✅ Released:
-[0.3.0](https://github.com/open-he-mchose/driver/releases) for Linux and Windows.
+[0.3.1](https://github.com/open-he-mchose/driver/releases) for Linux and Windows.
 
 - Library + command-line tool in **C++20** (CMake, HID access through hidapi) for **Linux and Windows**.
   macOS is not planned for now (not a primary target).
@@ -57,7 +57,7 @@ Released in 0.2.0 (Windows package; confirmed working on Windows by a user): ite
 actuation and rapid trigger, all layers, macros, advanced keys, profiles, per-key colours, Lua effects, other
 settings, backup / restore.
 
-Items 10–13 released in 0.3.0 (Linux AppImage, depth graph, virtual gamepad, Russian translation). Next: item 9.
+Items 10–13 released in 0.3.0 (Linux AppImage, depth graph, virtual gamepad, Russian translation). 0.3.1: one program per user with a background mode (tray where available), the running effect and script parameters restored on connect, start at login. Next: item 9.
 
 Planned, roughly in this order:
 
